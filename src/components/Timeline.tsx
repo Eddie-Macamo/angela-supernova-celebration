@@ -30,13 +30,13 @@ const Timeline = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-rose-50 to-white">
+    <section className="py-12 sm:py-20 bg-gradient-to-b from-rose-50 to-white">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="font-playfair text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+        <div className="text-center mb-12 sm:mb-16 animate-fade-in">
+          <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-4">
             Nossa Jornada Juntas
           </h2>
-          <p className="font-inter text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="font-inter text-base sm:text-lg text-gray-600 max-w-2xl mx-auto px-4">
             Cada momento da nossa amizade é um tesouro que guardo no coração 💝
           </p>
         </div>
@@ -45,26 +45,26 @@ const Timeline = () => {
           {moments.map((moment, index) => (
             <div 
               key={index}
-              className="relative flex items-center mb-12 animate-fade-in"
+              className="relative flex items-start sm:items-center mb-8 sm:mb-12 animate-fade-in"
               style={{animationDelay: `${index * 0.2}s`}}
             >
               {/* Timeline line */}
               {index < moments.length - 1 && (
-                <div className="absolute left-6 top-16 w-0.5 h-20 bg-gradient-to-b from-rose-300 to-pink-300"></div>
+                <div className="absolute left-5 sm:left-6 top-12 sm:top-16 w-0.5 h-16 sm:h-20 bg-gradient-to-b from-rose-300 to-pink-300"></div>
               )}
 
               {/* Icon */}
-              <div className={`flex-shrink-0 w-12 h-12 rounded-full bg-gradient-to-r ${moment.color} flex items-center justify-center shadow-lg z-10`}>
-                <moment.icon className="text-white" size={20} />
+              <div className={`flex-shrink-0 w-10 sm:w-12 h-10 sm:h-12 rounded-full bg-gradient-to-r ${moment.color} flex items-center justify-center shadow-lg z-10 mt-1 sm:mt-0`}>
+                <moment.icon className="text-white" size={16} />
               </div>
 
               {/* Content */}
-              <div className="ml-8 flex-1">
-                <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-rose-100">
-                  <h3 className="font-playfair text-xl font-bold text-gray-800 mb-2">
+              <div className="ml-6 sm:ml-8 flex-1">
+                <div className="bg-white rounded-2xl p-4 sm:p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-rose-100">
+                  <h3 className="font-playfair text-lg sm:text-xl font-bold text-gray-800 mb-2">
                     {moment.title}
                   </h3>
-                  <p className="font-inter text-gray-600 leading-relaxed">
+                  <p className="font-inter text-sm sm:text-base text-gray-600 leading-relaxed">
                     {moment.description}
                   </p>
                 </div>

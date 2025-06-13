@@ -47,23 +47,23 @@ const PhotoGallery = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-white to-rose-50">
+    <section className="py-12 sm:py-20 bg-gradient-to-b from-white to-rose-50">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16 animate-fade-in">
-          <div className="flex items-center justify-center mb-4">
-            <Camera className="text-rose-500 mr-2" size={28} />
-            <h2 className="font-playfair text-4xl md:text-5xl font-bold text-gray-800">
+        <div className="text-center mb-12 sm:mb-16 animate-fade-in">
+          <div className="flex items-center justify-center mb-4 flex-wrap">
+            <Camera className="text-rose-500 mr-2" size={24} />
+            <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 text-center">
               Momentos Especiais
             </h2>
-            <Camera className="text-rose-500 ml-2" size={28} />
+            <Camera className="text-rose-500 ml-2" size={24} />
           </div>
-          <p className="font-inter text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="font-inter text-base sm:text-lg text-gray-600 max-w-2xl mx-auto px-4">
             Uma coleção dos nossos momentos mais preciosos juntas. 
             Cada foto conta uma história de amizade e alegria! 📸
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-6xl mx-auto">
           {photos.map((photo, index) => (
             <div 
               key={photo.id}
@@ -72,21 +72,21 @@ const PhotoGallery = () => {
               onClick={() => setSelectedPhoto(photo.id)}
             >
               <div className="aspect-square bg-gradient-to-br from-rose-200 to-pink-300 flex items-center justify-center">
-                <Camera className="text-white/70" size={48} />
+                <Camera className="text-white/70" size={36} />
               </div>
               
               {/* Overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="absolute bottom-0 left-0 right-0 p-4">
-                  <p className="text-white font-inter text-sm leading-relaxed">
+                <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-4">
+                  <p className="text-white font-inter text-xs sm:text-sm leading-relaxed">
                     {photo.caption}
                   </p>
                 </div>
               </div>
 
               {/* Heart icon */}
-              <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <Heart className="text-white fill-current" size={24} />
+              <div className="absolute top-3 sm:top-4 right-3 sm:right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <Heart className="text-white fill-current" size={20} />
               </div>
             </div>
           ))}
@@ -99,18 +99,18 @@ const PhotoGallery = () => {
               <Button
                 variant="ghost"
                 size="icon"
-                className="absolute top-4 right-4 text-white hover:bg-white/20 z-10"
+                className="absolute top-2 sm:top-4 right-2 sm:right-4 text-white hover:bg-white/20 z-10"
                 onClick={() => setSelectedPhoto(null)}
               >
-                <X size={24} />
+                <X size={20} />
               </Button>
               
               <div className="bg-white rounded-2xl overflow-hidden">
-                <div className="aspect-video bg-gradient-to-br from-rose-200 to-pink-300 flex items-center justify-center">
-                  <Camera className="text-white/70" size={64} />
+                <div className="aspect-video sm:aspect-video bg-gradient-to-br from-rose-200 to-pink-300 flex items-center justify-center">
+                  <Camera className="text-white/70" size={48} />
                 </div>
-                <div className="p-6">
-                  <p className="font-inter text-gray-700 text-center">
+                <div className="p-4 sm:p-6">
+                  <p className="font-inter text-gray-700 text-center text-sm sm:text-base">
                     {photos.find(p => p.id === selectedPhoto)?.caption}
                   </p>
                 </div>
