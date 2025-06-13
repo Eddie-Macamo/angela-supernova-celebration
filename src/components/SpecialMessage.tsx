@@ -27,8 +27,9 @@ const SpecialMessage = () => {
 
             <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-6 sm:p-8 md:p-12 shadow-2xl border border-rose-200 animate-fade-in mx-2" style={{animationDelay: '0.3s'}}>
               <blockquote className="font-inter text-base sm:text-lg md:text-xl leading-relaxed text-gray-700 mb-6 sm:mb-8">
-                "Angela, você é muito mais do que uma amiga - você é família escolhida, 
-                é luz nos dias escuros, é risada garantida em qualquer momento. 
+                "Yuyucha, você é muito mais do que uma amiga - você é muito especial para mim!
+                Sua amizade é um tesouro que guardo com carinho. 
+                É luz nos dias escuros, é risada garantida em qualquer momento. 
                 Sua presença na minha vida é um presente que agradeço todos os dias. 
                 Que este novo ano seja repleto de realizações, alegrias e muitas aventuras juntas! 
                 Você merece todo o amor e felicidade do mundo. 💕"
@@ -47,7 +48,7 @@ const SpecialMessage = () => {
                 className="bg-gradient-to-r from-rose-500 to-pink-500 hover:from-rose-600 hover:to-pink-600 text-white font-inter font-semibold px-6 sm:px-8 py-3 sm:py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
               >
                 <Gift className="mr-2" size={18} />
-                <span className="text-sm sm:text-base">Surpresa Especial</span>
+                <span className="text-sm sm:text-base">te amo Yuyucha</span>
               </Button>
             </div>
           </div>

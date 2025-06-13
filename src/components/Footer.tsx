@@ -31,7 +31,7 @@ const Footer = () => {
 
           <div className="border-t border-white/20 pt-6 sm:pt-8 animate-fade-in" style={{animationDelay: '0.8s'}}>
             <p className="font-inter text-rose-100 text-sm sm:text-base">
-              Feito com muito 💕 para celebrar a Angela
+              Feito com muito 💕 para celebrar seu dia, minha querida!
             </p>
             <p className="font-inter text-rose-200 text-xs sm:text-sm mt-2">
               14 de Junho • Um dia especial para uma pessoa especial

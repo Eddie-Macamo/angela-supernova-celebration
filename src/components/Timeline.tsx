@@ -18,7 +18,7 @@ const Timeline = () => {
     {
       icon: MapPin,
       title: "Lugares especiais",
-      description: "Cada lugar que visitamos juntas se tornou mais especial",
+      description: "Nossa viagem de comboio para Goba ficou marcada na memória",
       color: "from-purple-400 to-indigo-400"
     },
     {
@@ -34,7 +34,7 @@ const Timeline = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 sm:mb-16 animate-fade-in">
           <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-4">
-            Nossa Jornada Juntas
+            Nossa Jornada Juntos
           </h2>
           <p className="font-inter text-base sm:text-lg text-gray-600 max-w-2xl mx-auto px-4">
             Cada momento da nossa amizade é um tesouro que guardo no coração 💝

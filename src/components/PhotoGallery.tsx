@@ -10,37 +10,37 @@ const PhotoGallery = () => {
   const photos = [
     {
       id: 1,
-      src: "/placeholder.svg",
+      src: "/fotos/1.jpg",
       alt: "Angela sorrindo",
       caption: "Esse sorriso ilumina qualquer dia! ✨"
     },
     {
       id: 2,
-      src: "/placeholder.svg",
+      src: "/fotos/2.jpg",
       alt: "Momento especial",
       caption: "Memórias que ficam para sempre no coração 💕"
     },
     {
       id: 3,
-      src: "/placeholder.svg",
+      src: "/fotos/3.jpg",
       alt: "Angela radiante",
       caption: "Sua alegria é contagiante! 🌟"
     },
     {
       id: 4,
-      src: "/placeholder.svg",
+      src: "/fotos/4.jpg",
       alt: "Aventuras juntas",
       caption: "As melhores aventuras são ao seu lado 🎈"
     },
     {
       id: 5,
-      src: "/placeholder.svg",
+      src: "/fotos/5.jpg",
       alt: "Celebrando",
       caption: "Cada momento merece ser celebrado! 🎊"
     },
     {
       id: 6,
-      src: "/placeholder.svg",
+      src: "/fotos/6.jpg",
       alt: "Angela especial",
       caption: "Uma pessoa única e especial 💖"
     }
@@ -58,7 +58,7 @@ const PhotoGallery = () => {
             <Camera className="text-rose-500 ml-2" size={24} />
           </div>
           <p className="font-inter text-base sm:text-lg text-gray-600 max-w-2xl mx-auto px-4">
-            Uma coleção dos nossos momentos mais preciosos juntas. 
+            Uma coleção dos seus momentos mais preciosos. 
             Cada foto conta uma história de amizade e alegria! 📸
           </p>
         </div>
@@ -71,9 +71,14 @@ const PhotoGallery = () => {
               style={{animationDelay: `${index * 0.1}s`}}
               onClick={() => setSelectedPhoto(photo.id)}
             >
-              <div className="aspect-square bg-gradient-to-br from-rose-200 to-pink-300 flex items-center justify-center">
-                <Camera className="text-white/70" size={36} />
-              </div>
+              <div className="aspect-square overflow-hidden">
+              <img
+                src={photo.src}
+                alt={photo.alt}
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+            </div>
+
               
               {/* Overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
